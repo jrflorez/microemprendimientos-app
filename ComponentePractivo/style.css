@@ -1,0 +1,57 @@
+body {
+    font-family: Arial;
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: 350px;
+    margin: 30px auto;
+    background: #2c2c3e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.menu button {
+    margin: 5px;
+    padding: 10px;
+    background: #4cafef;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+input, select {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+button {
+    background: #00c853;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: #444;
+    margin: 5px;
+    padding: 5px;
+}
+
+li button {
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
