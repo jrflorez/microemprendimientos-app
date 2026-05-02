@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gestión Microempresas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox" class="container">
+    <h2>🔐 Iniciar Sesión</h2>
+    <input id="user" placeholder="Usuario">
+    <input id="pass" type="password" placeholder="Contraseña">
+    <button onclick="login()">Ingresar</button>
+</div>
+
+<!-- APP -->
+<div id="app" class="container oculto">
+
+    <h1>📊 Panel de Gestión</h1>
+
+    <button onclick="logout()">Cerrar sesión</button>
+
+    <div class="menu">
+        <button onclick="mostrar('dashboard')">Dashboard</button>
+        <button onclick="mostrar('productos')">Productos</button>
+        <button onclick="mostrar('clientes')">Clientes</button>
+        <button onclick="mostrar('ventas')">Ventas</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="seccion">
+        <h2>Resumen</h2>
+        <p>Total Productos: <span id="totalProductos">0</span></p>
+        <p>Total Ventas: <span id="totalVentas">0</span></p>
+        <p>Ingresos: $<span id="ingresos">0</span></p>
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div id="productos" class="seccion oculto">
+        <h2>Productos</h2>
+        <input id="pNombre" placeholder="Nombre">
+        <input id="pPrecio" type="number" placeholder="Precio">
+        <button onclick="guardarProducto()">Guardar</button>
+        <ul id="listaProductos"></ul>
+    </div>
+
+    <!-- CLIENTES -->
+    <div id="clientes" class="seccion oculto">
+        <h2>Clientes</h2>
+        <input id="cNombre" placeholder="Nombre cliente">
+        <button onclick="guardarCliente()">Guardar</button>
+        <ul id="listaClientes"></ul>
+    </div>
+
+    <!-- VENTAS -->
+    <div id="ventas" class="seccion oculto">
+        <h2>Ventas</h2>
+        <select id="vProducto"></select>
+        <select id="vCliente"></select>
+        <input id="vCantidad" type="number" placeholder="Cantidad">
+        <button onclick="registrarVenta()">Vender</button>
+        <ul id="listaVentas"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
